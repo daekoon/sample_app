@@ -21,8 +21,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     min_length = min_validation.options[:minimum]
     assert_select "li", "Password is too short (minimum is #{min_length} characters)"
-
-    assert_select 'form[action="/signup"]'
   end
 
   test "valid signup information" do
